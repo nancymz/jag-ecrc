@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Switch, Route, HashRouter, Redirect } from "react-router-dom";
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 import OrgValidation from "./components/page/orgValidation/OrgValidation";
 import OrgVerification from "./components/page/orgVerification/OrgVerification";
 import ApplicationForm from "./components/page/applicationForm/ApplicationForm";
@@ -45,7 +45,7 @@ export default function App() {
 
   return (
     <div>
-      <HashRouter>
+      <BrowserRouter>
         <Switch>
           <Redirect exact from="/" to="/criminalrecordcheck" />
           <Route exact path="/(ecrc|criminalrecordcheck)">
@@ -110,7 +110,7 @@ export default function App() {
             }}
           />
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
